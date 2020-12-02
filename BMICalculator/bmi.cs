@@ -19,19 +19,19 @@ namespace BMICalculator
         const double InchestoMetres = 0.0254;
 
         [Display(Name = "Weight - Stones")]
-        [Range(5, 50, ErrorMessage = "Stones must be between 5 and 50")]                              // max 50 stone
+        [Range(5, 50, ErrorMessage = "Attention, Stones must be between 5 and 50")]                              // max 50 stone
         public int WeightStones { get; set; }
 
         [Display(Name = "Pounds")]
-        [Range(0, 13, ErrorMessage = "Pounds must be between 0 and 13")]                              // 14 lbs in a stone
+        [Range(0, 13, ErrorMessage = "Attention, Pounds must be between 0 and 13")]                              // 14 lbs in a stone
         public int WeightPounds { get; set; }
 
         [Display(Name = "Height - Feet")]
-        [Range(4, 7, ErrorMessage = "Feet must be between 4 and 7")]                               // max 7 feet
+        [Range(4, 7, ErrorMessage = "Attention,Feet must be between 4 and 7")]                               // max 7 feet
         public int HeightFeet { get; set; }
 
         [Display(Name = "Inches")]
-        [Range(0, 11, ErrorMessage = "Inches must be between 0 and 11")]                              // 12 inches in a foot
+        [Range(0, 11, ErrorMessage = "Attention, Inches must be between 0 and 11")]                              // 12 inches in a foot
         public int HeightInches { get; set; }
 
         // calculate BMI, display to 2 decimal places
