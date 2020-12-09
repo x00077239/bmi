@@ -12,7 +12,7 @@ namespace BMICalculator.Pages
 
         public void OnGet()
         {
-            Message = "Your application description page.";
+            Message = "Welcome to the BMI Calculator.";
         }
     }
 }

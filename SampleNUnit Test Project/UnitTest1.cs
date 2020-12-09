@@ -81,7 +81,7 @@ namespace SampleNUnit_Test_Project
             BMICalculator.BMI BMITest = new BMICalculator.BMI
             {
                 WeightStones = 2,
-                WeightPounds = 56,
+                WeightPounds = 6,
                 HeightFeet = 4,
                 HeightInches = 72,
             };
