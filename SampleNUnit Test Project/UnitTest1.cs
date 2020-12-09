@@ -20,7 +20,7 @@ namespace SampleNUnit_Test_Project
         {
             BMICalculator.BMI BMITest = new BMICalculator.BMI
             {
-                WeightStones = 1,
+                WeightStones = 11,
                 WeightPounds = 28,
                 HeightFeet = 1,
                 HeightInches = 36,
