@@ -15,3 +15,31 @@ variables:
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
+- task: CopyFiles@2
+  inputs:
+    Contents: |
+      **\*.dll
+       **\*runsettings
+       **\*.csproj
+    TargetFolder: '- task: CopyFiles@2
+  inputs:
+    Contents: |
+      **\*.dll
+             **\*runsettings
+             **\*.csproj
+    TargetFolder: '$(build.artifactstagingdirectory)''
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'publish'
+    publishWebProjects: true
+    arguments: 'a.	--configuration $(BuildConfiguration) --output $(build.artifactstagingdirectory)'
+ - task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
